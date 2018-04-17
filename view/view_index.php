@@ -5,6 +5,13 @@
 </head>
 <body>
 	<h1>Gestion de l'IIA</h1>
+	<form method="post" action="scripts/modif_base.php">
+			
+		<label for="ajout"> Ajouter une promotion </label> 
+		<input type="text" name="ajout" id="ajout" placeholder="intitulé"/>
+		<input type="submit" name="ok" id="ok" value="Go !"/><br/><br/>
+
+	</form>
 	<?php
 
 		

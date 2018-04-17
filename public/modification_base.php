@@ -9,9 +9,11 @@
 	{						
 		if (!empty($_GET['pro_id']))
 		{
-			
-			supprimerPromotion($db, $_GET['pro_id']);
-			header('Location: index.php');
+			if ($_GET['code'] == 'pro')
+			{
+				supprimerPromotion($db, $_GET['pro_id']);
+				header('Location: index.php');
+			}
 			
 		}
 	}

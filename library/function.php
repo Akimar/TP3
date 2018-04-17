@@ -72,4 +72,24 @@ function ajouterPromotion($db, $intitule)
 	$request_ajout_promotion->execute(array(':intitule' => $intitule));
 }
 
+/****** Requêtes d'interrogation de la base ******/
+
+function getNomPromotion($db, $id_promo)
+{
+	$request_promo = $db->prepare('SELECT intitule FROM promotion WHERE id = :id_promo');
+	$request_promo->execute(array(':id_promo' => $id_promo));
+	return $request_promo;
+	
+}
+
+
+
+
+function getEtudiantPromo($db, $promo)
+{
+	$request_etu = $db->prepare('SELECT * FROM etudiant WHERE promotion =:id_promo ORDER BY nom, prenom');
+	$request_etu->execute(array(':id_promo' => $promo));
+	return $request_etu;
+}
+
 ?>

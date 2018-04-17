@@ -21,7 +21,7 @@
 
 		while ($row = $reponse_promo->fetch()) {
 
-			echo'<li><a href="promotion.php?pro_id='.$row['id'].'">'. $row['intitule'].'</a>', '<a href="modification_base.php?pro_id='.$row['id'].'"> <img src="../images/cancel.png" alt="Supprimmer"/></a><br/><br/>';
+			echo'<li><a href="promotion.php?pro_id='.$row['id'].'">'. $row['intitule'].'</a>', '<a href="modification_base.php?pro_id='.$row['id'].'&code=pro"> <img src="../images/cancel.png" alt="Supprimmer"/></a><br/><br/>';
 
 			
 			}

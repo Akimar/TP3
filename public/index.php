@@ -21,7 +21,7 @@
 		catch(PDOException $ex) 
 		{
 			
-	  		die('Erreur : '.$ex->getMessage());
+	  		echo 'Erreur : '.$ex->getMessage();
 		}
 
 	    $promo = $db->query('SELECT * FROM promotion ORDER BY intitule');

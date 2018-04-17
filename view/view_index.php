@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1>Gestion de l'IIA</h1>
-	<form method="post" action="scripts/modif_base.php">
+	<form method="post" action="">
 			
 		<label for="ajout"> Ajouter une promotion </label> 
 		<input type="text" name="ajout" id="ajout" placeholder="intitulé"/>
@@ -16,12 +16,10 @@
 
 		
 		echo '<br/>Liste des ', $nb_promo,' promotions de l\' IIA.';
-		
-	    $promo = $db->query('SELECT * FROM promotion ORDER BY intitule');
 
 	    echo '<br/><ul>';
 
-		while ($row = $promo->fetch()) {
+		while ($row = $reponse_promo->fetch()) {
 
 			echo'<li><a href="">'. $row['intitule'].'</a></li><br/>';
 

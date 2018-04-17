@@ -5,7 +5,7 @@
 </head>
 <body>
 	<a href="index.php"> Retour à la liste des promotions.</a><br/><br/>
-	<?php echo '<form method="post" action="modification_base.php?pro_id=', $_GET['pro_id'], '">';?>
+	<?php echo '<form method="post" action="modification_base.php?pro_id=', getInputGet('pro_id'), '">';?>
 	
 	Ajouter un étudiant<br/>
 
@@ -20,7 +20,7 @@
 </form>
 
 <?php
-	echo 'Liste des ', $nb_etu, ' étudiants de la promotion ', $nom_promo['intitule'],'.'; 
+	echo 'Liste des ', $nb_etu, ' étudiant(s) de la promotion ', $nom_promo['intitule'],'.'; 
 	echo '<ul>';
 	while($ligne = $reponse_etu->fetch())
 	{

@@ -55,7 +55,7 @@ function supprimerPromotion($db, $id_promo)
 
 function supprimerEtudiant($db, $id_etu)
 {
-	$request_supprimer_etudiant = $db->prepare('DELETE FROM Etudiant WHERE id = :id_etu');
+	$request_supprimer_etudiant = $db->prepare('DELETE FROM etudiant WHERE id = :id_etu');
 	$request_supprimer_etudiant->execute(array(':id_etu' => $id_etu));
 }
 

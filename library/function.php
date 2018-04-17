@@ -1,5 +1,10 @@
 <?php
 
+function getInputPost($name)
+{
+	return filter_input(INPUT_POST, $name);
+}
+
 /**** Connexion à la base ******/
 
 function getDb()
@@ -43,11 +48,28 @@ function supprimerPromotion($db, $id_promo)
 	$request_supprimer_promo->execute(array(':id_promo' => $id_promo));
 }
 
-function suppEtudiant($db, $id_etu)
+function supprimerEtudiant($db, $id_etu)
 {
 	$request_supprimer_etudiant = $db->prepare('DELETE FROM Etudiant WHERE id = :id_etu');
 	$request_supprimer_etudiant->execute(array(':id_etu' => $id_etu));
 }
 
+
+/**** Ajout étudiants/promotions *****/					
+
+function ajouterEtudiant($db, $nom, $prenom, $promotion)
+{
+	$request_ajout_etudiant = $db->prepare('INSERT INTO etudiant VALUES(NULL, :prenom, :nom, :promotion)');
+	$request_ajout_etudiant->execute(array(':prenom' => $prenom,
+											':nom' => $nom,
+										   ':promotion' =>$promotion));
+}
+
+
+function ajouterPromotion($db, $intitule)
+{
+	$request_ajout_promotion = $db->prepare('INSERT INTO promotion VALUES(NULL, :intitule)');
+	$request_ajout_promotion->execute(array(':intitule' => $intitule));
+}
 
 ?>

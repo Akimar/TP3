@@ -8,7 +8,7 @@
 	<form method="post" action="modification_base.php">
 			
 		<label for="ajout"> Ajouter une promotion </label> 
-		<input type="text" name="ajout" id="ajout" placeholder="intitulé"/>
+		<input type="text" name="promotion" id="promotion" placeholder="Intitulé"/>
 		<input type="submit" name="ok" id="ok" value="Go !"/><br/><br/>
 
 	</form>
@@ -21,7 +21,7 @@
 
 		while ($row = $reponse_promo->fetch()) {
 
-			echo'<li><a href="promotion.php?pro_id='.$row['id'].'">'. $row['intitule'].'</a>', '<a href="modification_base.php?pro_id='.$row['id']. '&code=1"> <img src="../images/cancel.png" alt="Supprimmer"/></a><br/><br/>';
+			echo'<li><a href="promotion.php?pro_id='.$row['id'].'">'. $row['intitule'].'</a>', '<a href="modification_base.php?pro_id='.$row['id'].'"> <img src="../images/cancel.png" alt="Supprimmer"/></a><br/><br/>';
 
 			
 			}

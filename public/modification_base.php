@@ -34,4 +34,11 @@
 
 	}
 
+	if (getInputPost('nom' !== '') && getInputPost('prenom') !== '')
+		{													
+				ajouterEtudiant($db, getInputPost('nom'), getInputPost('prenom'), getInputGet('pro_id'));
+		}
+		
+		header('Location: promotion.php?pro_id='. getInputGet('pro_id'));
+
 ?>

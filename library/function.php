@@ -5,6 +5,11 @@ function getInputPost($name)
 	return filter_input(INPUT_POST, $name);
 }
 
+function getInputGet($name)
+{
+	return filter_input(INPUT_GET, $name);
+}
+
 /**** Connexion à la base ******/
 
 function getDb()

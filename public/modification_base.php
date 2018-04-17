@@ -4,20 +4,29 @@
 
 	$db = getDb();
 
-
-	if (isset($_GET['pro_id']))
-	{						
-		if (!empty($_GET['pro_id']))
-		{
-			if ($_GET['code'] == 'pro')
-			{
-				supprimerPromotion($db, $_GET['pro_id']);
-				header('Location: index.php');
-			}
 			
+	if (getInputGet('pro_id') !== '')
+	{
+		if (getInputGet('code') == 'pro')
+		{
+			supprimerPromotion($db, getInputGet('pro_id'));
+			header('Location: index.php');
 		}
+			
 	}
 
+	if (getInputGet('etu_id') !== '')
+	{
+		if (getInputGet('code') == 'etu')
+		{
+			
+			supprimerEtudiant($db, getInputGet('etu_id'));
+			header('Location: promotion.php?pro_id='. getInputGet('pro_id'));
+			
+		}
+			
+	}
+	
 	if(getInputpost('promotion') !== '')
 	{
 		ajouterPromotion($db, getInputpost('promotion'));

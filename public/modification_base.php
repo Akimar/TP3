@@ -21,7 +21,7 @@
 		{
 			
 			supprimerEtudiant($db, getInputGet('etu_id'));
-			header('Location: promotion.php?pro_id='. getInputGet('pro_id'));
+			header('location: promotion.php?pro_id='. getInputGet('pro_id'));
 			
 		}
 			
@@ -31,14 +31,11 @@
 	{
 		ajouterPromotion($db, getInputpost('promotion'));
 		header('Location: index.php');
+	
 
 	}
 
-	if (getInputPost('nom') !== '' && getInputPost('prenom') !== '')
-		{													
-			ajouterEtudiant($db, getInputPost('nom'), getInputPost('prenom'), getInputGet('pro_id'));
-		}
+	
 		
-		header('Location: promotion.php?pro_id='. getInputGet('pro_id'));
 
 ?>

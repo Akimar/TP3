@@ -5,7 +5,7 @@
 </head>
 <body>
 	<a href="index.php"> Retour à la liste des promotions.</a><br/><br/>
-	<?php echo '<form method="post" action="modification_base.php?pro_id=', getInputGet('pro_id'), '">';?>
+	<?php echo '<form method="post" action="ajout_etudiant.php?pro_id=', getInputGet('pro_id'), '">';?>
 	
 	Ajouter un étudiant<br/>
 
@@ -24,7 +24,7 @@
 	echo '<ul>';
 	while($ligne = $reponse_etu->fetch())
 	{
-		echo  '<li>'. $ligne['prenom'] .' '. $ligne['nom']. '  <a href="modification_base.php?etu_id='. $ligne['id'], '&pro_id='. $_GET['pro_id']. ' &code=etu"> <img src="../images/cancel.png" alt="Supprimmer"></a></li>';
+		echo  '<li>'. $ligne['prenom'] .' '. $ligne['nom']. '  <a href="suppression_etudiant.php?etu_id='. $ligne['id'], '&pro_id='. getInputGET('pro_id'). ' &code=etu"> <img src="../images/cancel.png" alt="Supprimmer"></a></li>';
 	
 	}
 

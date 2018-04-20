@@ -2,13 +2,16 @@
 
 	require '../library/function.php';	
 
-	$db = getDb();
+	require '../src/autoload.php';
+
+
+	use repository\Promotion;
 
 			
 	if (getInputGet('pro_id') !== '')
 	{
 		
-		supprimerPromotion($db, getInputGet('pro_id'));
+		Promotion::supprimerPromotion(getInputGet('pro_id'));
 		header('Location: index.php');
 	
 			

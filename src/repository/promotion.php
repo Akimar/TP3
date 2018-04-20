@@ -36,7 +36,6 @@ class Promotion
 		$request_promo = $db->prepare('SELECT intitule FROM promotion WHERE id = :id_promo');
 		$request_promo->execute(array(':id_promo' => $id_promo));
 		return $request_promo;
-	
 	}
 
 }

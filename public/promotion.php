@@ -12,9 +12,8 @@
 	use repository\Promotion;		
 	use repository\Etudiant;
 
-	$pro_id = getInputGet('pro_id');
 
-	$reponse_promo = Promotion::getNomPromotion($pro_id);
+	$reponse_promo = Promotion::getNomPromotion(getInputGet('pro_id'));
 	$nom_promo = $reponse_promo->fetch();
 	
 

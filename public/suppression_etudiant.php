@@ -6,11 +6,10 @@
 	
 	if (getInputGet('etu_id') !== '')
 	{
-		if (getInputGet('code') == 'etu')
-		{
+		
 			
-			supprimerEtudiant($db, getInputGet('etu_id'));
-			header('location: promotion.php?pro_id='. getInputGet('pro_id'));
+		supprimerEtudiant($db, getInputGet('etu_id'));
+		header('location: promotion.php?pro_id='. getInputGet('pro_id'));
 			
-		}
+	}
 ?>

@@ -7,11 +7,10 @@
 			
 	if (getInputGet('pro_id') !== '')
 	{
-		if (getInputGet('code') == 'pro')
-		{
-			supprimerPromotion($db, getInputGet('pro_id'));
-			header('Location: index.php');
-		}
+		
+		supprimerPromotion($db, getInputGet('pro_id'));
+		header('Location: index.php');
+	
 			
 	}
 ?>

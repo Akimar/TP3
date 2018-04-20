@@ -24,7 +24,7 @@
 	echo '<ul>';
 	while($ligne = $reponse_etu->fetch())
 	{
-		echo  '<li>'. $ligne['prenom'] .' '. $ligne['nom']. '  <a href="suppression_etudiant.php?etu_id='. $ligne['id'], '&pro_id='. getInputGET('pro_id'). ' &code=etu"> <img src="../images/cancel.png" alt="Supprimmer"></a></li>';
+		echo  '<li>'. $ligne['prenom'] .' '. $ligne['nom']. '  <a href="suppression_etudiant.php?etu_id='. $ligne['id'], '&pro_id='. getInputGET('pro_id'). '"> <img src="../images/cancel.png" alt="Supprimmer"></a></li>';
 	
 	}
 

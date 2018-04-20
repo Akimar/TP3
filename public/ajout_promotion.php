@@ -7,7 +7,7 @@
 	use repository\Promotion;
 
 
-	if(getInputpost('promotion') !== '')
+	if(getInputPost('promotion') !== '')
 	{
 		Promotion::ajouterPromotion(getInputPost('promotion'));
 		header('Location: index.php');

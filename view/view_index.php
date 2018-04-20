@@ -15,13 +15,13 @@
 	<?php
 
 		
-		echo '<br/>Liste des ', $nb_promo,' promotions de l\' IIA.';
+		echo '<br/>Liste des ', $nb_promo,' promotions de l\'IIA.';
 
 	    echo '<br/><ul>';
 
 		while ($row = $reponse_promo->fetch()) {
 
-			echo'<li><a href="promotion.php?pro_id='.$row['id'].'">'. $row['intitule'].'</a>'. '<a href="suppression_promotion.php?pro_id='.$row['id'].'"> <img src="../images/cancel.png" alt="Supprimmer"/></a><br/><br/>';
+			echo'<li><a href="promotion.php?pro_id='.$row['id'].'">'. $row['intitule'].'</a>'. '<a href="suppression_promotion.php?pro_id='.$row['id'].'"> <img src="images/cancel.png" alt="Supprimmer"/></a><br/><br/>';
 
 			
 			}

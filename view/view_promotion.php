@@ -13,7 +13,7 @@
 	<input type="text" name="nom" id="nom"/><br/>
 	
 	<label for="prenom"> Prénom </label> 
-	<input type="text" name="prenom" id="prenom"/></body><br>
+	<input type="text" name="prenom" id="prenom"/><br/><br/>
 
 
 	<input type="submit" name="ok" id="ok" value="Go !"/><br/><br/>
@@ -24,7 +24,7 @@
 	echo '<ul>';
 	while($ligne = $reponse_etu->fetch())
 	{
-		echo  '<li>'. $ligne['prenom'] .' '. $ligne['nom']. '  <a href="suppression_etudiant.php?etu_id='. $ligne['id'], '&pro_id='. getInputGET('pro_id'). '"> <img src="../images/cancel.png" alt="Supprimmer"></a></li>';
+		echo  '<li>'. $ligne['prenom'] .' '. $ligne['nom']. '  <a href="suppression_etudiant.php?etu_id='. $ligne['id'], '&pro_id='. getInputGET('pro_id'). '"> <img src="images/cancel.png" alt="Supprimmer"></a></li>';
 	
 	}
 

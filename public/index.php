@@ -1,8 +1,12 @@
 <?php
 
 require '../library/function.php';	
+require '../src/service/BDD.php';
 
-	$db = getDb();
+use service\BDD;
+	
+
+	$db = new BDD();
 
 	$reponse_promo = getAllPromotions($db);
 	$nb_promo = $reponse_promo->rowCount();

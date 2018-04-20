@@ -9,7 +9,7 @@
 
 	if(getInputpost('promotion') !== '')
 	{
-		Promotion::ajouterPromotion(getInputpost('promotion'));
+		Promotion::ajouterPromotion(getInputPost('promotion'));
 		header('Location: index.php');
 	
 

@@ -14,7 +14,7 @@ class BDD extends \PDO
  		catch(PDOException $ex) 
 		{
 		
-  		echo 'Erreur : '.$ex->getMessage();
+  			echo 'Erreur : '.$ex->getMessage();
 		}
  	}
 }

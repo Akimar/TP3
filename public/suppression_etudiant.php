@@ -2,13 +2,16 @@
 
 	require '../library/function.php';	
 
-	$db = getDb();
+	require '../src/autoload.php';
+
+
+	use repository\Etudiant;
 	
 	if (getInputGet('etu_id') !== '')
 	{
 		
 			
-		supprimerEtudiant($db, getInputGet('etu_id'));
+		Etudiant::supprimerEtudiant(getInputGet('etu_id'));
 		header('location: promotion.php?pro_id='. getInputGet('pro_id'));
 			
 	}

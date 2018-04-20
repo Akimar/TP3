@@ -6,11 +6,10 @@ require '../library/function.php';
 
 require '../src/autoload.php';
 
-//use service\BDD;
+
 use repository\Promotion;
 	
 
-	//$db = new BDD();
 
 	$reponse_promo = Promotion::getAllPromotions();
 	$nb_promo = $reponse_promo->rowCount();

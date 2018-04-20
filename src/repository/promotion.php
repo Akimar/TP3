@@ -23,6 +23,22 @@ class Promotion
 		$request_supprimer_promo->execute(array(':id_promo' => $id_promo));
 	}
 
+	public static function ajouterPromotion($intitule)
+	{
+		$db = new BDD();
+		$request_ajout_promotion = $db->prepare('INSERT INTO promotion VALUES(NULL, :intitule)');
+		$request_ajout_promotion->execute(array(':intitule' => $intitule));
+	}
+
+	public static function getNomPromotion($id_promo)
+	{
+		$db = new BDD();
+		$request_promo = $db->prepare('SELECT intitule FROM promotion WHERE id = :id_promo');
+		$request_promo->execute(array(':id_promo' => $id_promo));
+		return $request_promo;
+	
+	}
+
 }
 
 

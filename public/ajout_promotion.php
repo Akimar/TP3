@@ -2,12 +2,15 @@
 
 	require '../library/function.php';	
 
-	$db = getDb();
+	require '../src/autoload.php';
+
+
+	use repository\Promotion;
 
 
 	if(getInputpost('promotion') !== '')
 	{
-		ajouterPromotion($db, getInputpost('promotion'));
+		Promotion::ajouterPromotion(getInputpost('promotion'));
 		header('Location: index.php');
 	
 

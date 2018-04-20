@@ -1,7 +1,6 @@
 <?php
 
 	require '../library/function.php';	
-
 	require '../src/autoload.php';
 
 

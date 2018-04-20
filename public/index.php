@@ -1,9 +1,6 @@
 <?php
 
 require '../library/function.php';	
-//require '../src/service/BDD.php';
-//require '../src/repository/promotion.php';
-
 require '../src/autoload.php';
 
 
